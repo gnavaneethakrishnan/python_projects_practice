@@ -1,0 +1,19 @@
+[
+    {"category": "history",
+        "question": "What is the final of France?",
+        "option": [{"a": "Paris"}, {"b": "London"}, {"c": "Rome"}],
+        "answer": "a"
+
+     },
+    {"category": "science",
+        "question": "What best programming langauge?",
+        "option": [{"a": "c"}, {"b": "java"}, {"c": "python"}],
+        "answer": "c"
+     },
+    {
+        "category": "math",
+        "question": "What is the best way to learn programming?",
+        "option": [{"a": "Tutoria"}, {"b": "By doing"}, {"c": "watching others do"}],
+        "answer": "b"
+    }
+]

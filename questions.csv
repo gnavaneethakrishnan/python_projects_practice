@@ -1,0 +1,10 @@
+category, question, options, answer
+General Knowledge, What is the capital of France?, 'Paris, London, Berlin, Paris', Paris
+General Knowledge, What is the capital of England?, 'Paris, London, Berlin, London', London
+General Knowledge, What is the capital of Germany?, 'Paris, London, Berlin, Berlin', Berlin 
+History, Who was the first president of the United States?, 'George Washington, Thomas Jefferson, Abraham Lincoln, George Washington', George Washington
+History, France was a member of which alliance in World War I?, 'Central Powers, Axis Powers, Allied Powers, Allied Powers', Allied Powers
+Science, What is the chemical symbol for the element oxygen?, 'O, O2, O3, O', O
+Science, What is the chemical symbol for the element hydrogen?, 'H, H2, H3, H', H
+Math, What is 2 + 2?, '2, 3, 4, 4', 4
+Math, What is 3 + 3?, '3, 6, 9, 6', 6
