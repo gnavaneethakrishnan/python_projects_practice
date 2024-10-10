@@ -72,8 +72,22 @@ def strikethrough(task):
     return ''.join([char + '\u0336' for char in task])
 
 
+def save_(user_tasks):
+    with open('mytasks.txt', 'w') as f:
+        for task in user_tasks:
+            f.write(task)
+
+
+def read_():
+    with open('mytasks.txt', 'r') as f:
+        task_lines = f.readlines()
+        tasks = [line for line in task_lines]
+        return tasks
+
+
 def main():
-    user_tasks: list = []
+
+    user_tasks: list = read_()
     print()
     menu()
     print()
@@ -90,6 +104,7 @@ def main():
         elif user_choice == 4:
             complete(user_tasks)
         else:
+            save_(user_tasks)
             print("Exiting the application")
             exit(code=21)
 
