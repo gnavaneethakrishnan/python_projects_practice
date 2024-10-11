@@ -11,9 +11,11 @@ def menu():
 def add_tasks(user_tasks):
     while True:
         user_task = (input("Enter a new task: ")).strip()
+        
         if user_task:
             user_tasks.append(user_task)
             print("Task has been added successfully")
+            save_(user_task)
             break
         else:
             print("Enter a valid task. Dont just put spaces")
@@ -25,7 +27,7 @@ def view_task(user_tasks):
         return
     print("Your task are: ")
     for index, task in enumerate(user_tasks, 1):
-        print(f"{index}. {task}")
+        print(f"{index}. {task.strip()}")
 
 
 def remove_task(user_tasks):
@@ -72,16 +74,15 @@ def strikethrough(task):
     return ''.join([char + '\u0336' for char in task])
 
 
-def save_(user_tasks):
-    with open('mytasks.txt', 'w') as f:
-        for task in user_tasks:
-            f.write(task)
+def save_(user_task):
+    with open('mytasks.txt', 'a') as f:
+        f.write(user_task + '\n')
 
 
 def read_():
     with open('mytasks.txt', 'r') as f:
         task_lines = f.readlines()
-        tasks = [line for line in task_lines]
+        tasks = [line.strip() for line in task_lines]
         return tasks
 
 
@@ -95,7 +96,7 @@ def main():
         user_choice = choice()
         if user_choice not in range(1, 6):
             continue
-        if user_choice == 2:
+        elif user_choice == 2:
             add_tasks(user_tasks)
         elif user_choice == 1:
             view_task(user_tasks)
@@ -104,7 +105,6 @@ def main():
         elif user_choice == 4:
             complete(user_tasks)
         else:
-            save_(user_tasks)
             print("Exiting the application")
             exit(code=21)
 
