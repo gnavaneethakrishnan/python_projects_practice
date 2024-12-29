@@ -16,6 +16,7 @@ def dice_game():
                 else:
                     print(*[(random.randint(1, 6), random.randint(1, 6))
                             for num in range(int(user_input))])
+                
                     count += 1
 
             elif user_input.lower() == 'n' and count == 0:
@@ -27,12 +28,14 @@ def dice_game():
 
             else:
                 print("Enter a valid input y or n")
+                
 
         except ValueError as e:
             print("Please enter a number")
 
     if count != 0:
         print(f"You rolled {count} times")
+    
 
 
 dice_game()
